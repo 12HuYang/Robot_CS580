@@ -67,6 +67,7 @@ class QuadcopterController:
 	    rospy.sleep(1) #wait for a second to wait for node to fully connect
 	    drone_takeoff_pub.publish(Empty()) #command drone to takeoff
     	    print "done!"
+	    return
         self.movement_pub.publish(twist) #publish message
     
     def get_target_location(self, image):
